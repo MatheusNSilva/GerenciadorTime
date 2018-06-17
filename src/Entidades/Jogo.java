@@ -1,5 +1,6 @@
 package Entidades;
 
+import java.util.ArrayList;
 
 public class Jogo {
 	
@@ -13,11 +14,11 @@ public class Jogo {
 	private float tempoJogo;
 	private String timeAdversario;
 	private Time time;
-	private Jogador[] jogadores;
+	private ArrayList<Jogador> jogadores;
 	
 	public Jogo(int numeroJogo, int placar, int placarAdversario, int totalAssistencias, int totalRebotes,
 			int totalBloqueios, int totalRoubosBola, float tempoJogo, String timeAdversario, Time time,
-			Jogador[] jogadores) {
+			ArrayList<Jogador> jogadores) {
 		this.numeroJogo = numeroJogo;
 		this.placar = placar;
 		this.placarAdversario = placarAdversario;
@@ -111,13 +112,13 @@ public class Jogo {
 		this.time = time;
 	}
 
-	public Jogador[] getJogadores() {
+	public ArrayList<Jogador> getJogadores() {
 		return jogadores;
 	}
 
-	public void setJogadores(Jogador[] jogadores) {
+	public void setJogadores(ArrayList<Jogador> jogadores) {
 		this.jogadores = jogadores;
 	}
-	
+
 		
 }

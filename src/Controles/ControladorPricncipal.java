@@ -11,26 +11,24 @@ public class ControladorPricncipal {
 		// TODO Auto-generated method stub
 		
 		ControladorTime controladorTime = new ControladorTime();
-		controladorTime.cadastrarTime("Cleveland Cavaliers");
-		Time time = controladorTime.getTime("Cleveland Cavaliers");
-		System.out.println(time.getNome());
+		controladorTime.cadastrarTime("Cleveland Cavaliers", null, null);
+		Time cleveland = controladorTime.getTime("Cleveland Cavaliers");
 		
 	
 		ControladorJogador controladorJogador = new ControladorJogador();
-		controladorJogador.cadastrarJogador("Lebron", 1.95f, 85.5f, 25, 10, 4, 6, 1, time, 45.0f);
+		controladorJogador.cadastrarJogador("Lebron", 1.95f, 85.5f, 25, 10, 4, 6, 1, cleveland, 45.0f);
 		Jogador jogador = controladorJogador.getJogador("Lebron");
-		System.out.println(jogador.toString());
-		controladorJogador.excluiJogador(jogador);
-		Jogador jogadorexcluido = controladorJogador.getJogador("Lebron");
-		System.out.println(jogadorexcluido);
-		
 		ControladorTenico controladorTecnico = new ControladorTenico();
-		controladorTecnico.cadastrarTecnico(time, "Arthur Popivich");
+		controladorTecnico.cadastrarTecnico(cleveland, "Arthur Popivich");
 		Tecnico tecnico = controladorTecnico.getTecnico("Arthur Popivich");
-		System.out.println(tecnico.getNome());
-		controladorTecnico.excluiTecnico(tecnico);
-		Tecnico tecnicoexcluido = controladorTecnico.getTecnico("Arthur Popivich");
-		System.out.println(tecnicoexcluido);
+		cleveland.addJogador(jogador);
+		
+		ControladorJogo controladorJogo = new ControladorJogo();
+		controladorJogo.cadastrarJogo(2, 89, 79, 20, 18, 10, 8, 40.5f, "Boston", cleveland, cleveland.getJogadores());
+		controladorJogo.getPlacarJogos();
+		System.out.println(controladorJogo.getPlacarJogos());
+		controladorJogo.excluiJogo(controladorJogo.getJogo(2));
+		System.out.println(controladorJogo.getJogo(2));
 	}
 
 }

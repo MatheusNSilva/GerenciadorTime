@@ -1,6 +1,7 @@
 package Controles;
 import Entidades.Tecnico;
 import Entidades.Time;
+import Entidades.Jogador;
 
 import java.util.ArrayList;
 public class ControladorTime {
@@ -10,8 +11,8 @@ public class ControladorTime {
 	public ControladorTime() {
 	}
 	
-	public void cadastrarTime(String nome) {
-		times.add(new Time(nome));
+	public void cadastrarTime(String nome, ArrayList<Jogador> jogadores, Tecnico tecnico) {
+		times.add(new Time(nome, jogadores, tecnico));
 	}
 	
 	public ArrayList<Time> getTimes(){

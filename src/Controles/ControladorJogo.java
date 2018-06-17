@@ -14,14 +14,15 @@ public class ControladorJogo {
 	
 	public void cadastrarJogo(int numeroJogo, int placar, int placarAdversario, int totalAssistencias, int totalRebotes,
 			int totalBloqueios, int totalRoubosBola, float tempoJogo, String timeAdversario, Time time,
-			Jogador[] jogadores) throws ExceptionAssistenciaInvalida {
-		
-		if(placar/2 <= totalAssistencias)
-			jogos.add( new Jogo(numeroJogo, placar, placarAdversario, totalAssistencias, totalRebotes, totalBloqueios, 
-					totalRoubosBola, tempoJogo, timeAdversario, time, jogadores));
-		else {
+			ArrayList<Jogador> jogadores) /*throws ExceptionAssistenciaInvalida*/ {
+		/*
+		if(placar/2 <= totalAssistencias)*/
+			jogos.add( new Jogo(numeroJogo, placar, placarAdversario, totalAssistencias, totalRebotes,
+					totalBloqueios, totalRoubosBola, tempoJogo, timeAdversario, time,
+					jogadores));
+		/*else {
 			throw new ExceptionAssistenciaInvalida("Quantidade de assistências incompativel com o placar");
-		}
+		}*/
 	}
 
 	public ArrayList<Jogo> getJogos() {
