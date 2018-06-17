@@ -15,6 +15,12 @@ public class Time {
 	 public void setNome(String nome) {
 		 this.nome = nome;
 	 }
+
+	@Override
+	public String toString() {
+		return "Time [nome=" + nome + "]";
+	}
+	 
 	
 }
   

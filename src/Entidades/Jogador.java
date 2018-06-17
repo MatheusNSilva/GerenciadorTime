@@ -106,6 +106,13 @@ public class Jogador extends Pessoa{
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
+	@Override
+	public String toString() {
+		return "Jogador [altura=" + altura + ", peso=" + peso + ", pontos=" + pontos + ", assistencias=" + assistencias
+				+ ", bloqueios=" + bloqueios + ", rebotes=" + rebotes + ", roubosBola=" + roubosBola + ", time=" + time.toString()
+				+ ", tempoQuadra=" + tempoQuadra + "]";
+	}
 	
 	
 }
