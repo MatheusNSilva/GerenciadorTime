@@ -4,7 +4,8 @@ import Entidades.Jogador;
 import Entidades.Jogo;
 import Entidades.Tecnico;
 import Entidades.Time;
-
+import Interfaces.CadastroJogador;
+import Interfaces.TelaMenuJogador;
 public class ControladorJogador {
 	
 	private ArrayList<Jogador> jogadores = new ArrayList<Jogador>();
@@ -47,4 +48,16 @@ public class ControladorJogador {
 		
 		return jogadorEncontrado;
 	}
+	/*
+	public void exibeTelaMenuJogador() {
+        this.telaMenuJogador = new TelaMenuJogador(this);
+        telaMenuJogador.setVisible(true);
+    }*/
+
+/*
+    public void exibeCadastroJogador() {
+        this.CadastroJogador = new CadastroJogador(this);
+        CadastroJogador.setVisible(true);
+    }
+    */
 }

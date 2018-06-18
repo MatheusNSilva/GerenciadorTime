@@ -4,7 +4,7 @@ import Entidades.Time;
 import Entidades.Jogo;
 import Entidades.Jogador;
 import Entidades.Tecnico;
-
+import Interfaces.CadastroJogador;
 public class ControladorPricncipal {
 
 	public static void main(String[] args) {
@@ -29,6 +29,9 @@ public class ControladorPricncipal {
 		System.out.println(controladorJogo.getPlacarJogos());
 		controladorJogo.excluiJogo(controladorJogo.getJogo(2));
 		System.out.println(controladorJogo.getJogo(2));
+		
+		CadastroJogador telaCadastroJogador = new CadastroJogador();
+		
 	}
 
 }
